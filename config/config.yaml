@@ -1,0 +1,77 @@
+data_ingestion:
+  true_data_path: "./notebook/content/True.csv"
+  fake_data_path: "./notebook/content/Fake.csv"
+
+  require_column_name:
+    - detail_text
+    - label
+
+  train_data_path: "./data/raw/train_data.csv"
+  test_data_path: "./data/raw/test_data.csv"
+
+  raw_data_path: "./notebook/content/final_df.csv"
+
+  test_size: 0.2
+
+data_validation:
+  train_data_path: "./data/raw/train_data.csv"
+  test_data_path: "./data/raw/test_data.csv"
+
+  valid_label: [0,1]
+
+  require_column_name: ['detail_text','label']
+
+  report_path: "./data/processing"
+
+data_transformation:
+  train_data_path: "./data/raw/train_data.csv"
+  test_data_path: "./data/raw/test_data.csv"
+
+  max_features: 10000
+  validation_size: 0.2
+  stopwords: "english"
+  ngram_range: [1,3]
+
+  vectorizer_path: "./data/encoding/tfidf_vectorizer.pkl"
+
+  train_encode_data_path: "./data/encoding"
+  test_encode_data_path: "./data/encoding"
+  val_encode_data_path: "./data/encoding"
+
+  y_train: "./data/encoding"
+  y_val: "./data/encoding"
+  y_test: "./data/encoding"
+
+model_training:
+
+  X_train_path: "./data/encoding/X_train.npz"
+  X_val_path: "./data/encoding/X_val.npz"
+
+  y_train_path: "./data/encoding/y_train.npy"
+  y_val_path: "./data/encoding/y_val.npy"
+
+  model_save_path: "./data/models/best_model.pkl"
+  model_report_path: "./data/models/model_report.pkl"
+
+  random_state: 42
+  max_iter: 1000
+
+  models:
+    LogisticRegression:
+      C: 1.0
+
+    LinearSVC:
+      C: 1.0
+
+    MultinomialNB:
+      alpha: 1.0
+
+model_evaluation:
+
+  X_test_path: "./data/encoding/X_test.npz"
+  y_test_path: "./data/encoding/y_test.npy"
+
+  load_model_path: "./data/models/best_model.pkl"
+
+  confusion_matrix_path: "./data/content/confusion_matrix.png"
+  evaluation_report_path: "./data/content/prediction_report.pkl"

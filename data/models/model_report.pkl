@@ -1,0 +1,9 @@
+{
+    "model_scores": {
+        "LogisticRegression": 0.9709128081221104,
+        "LinearSVC": 0.9862850132001271,
+        "MultinomialNB": 0.9468436315541637
+    },
+    "best_model": "LinearSVC",
+    "best_validation_f1": 0.9862850132001271
+}

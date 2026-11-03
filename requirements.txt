@@ -1,0 +1,30 @@
+# EDA Clean Data
+
+pandas
+numpy
+matplotlib
+seaborn
+
+# Model Building 
+
+scikit-learn
+xgboost
+nltk
+
+# Tracking Model
+
+mlflow
+
+# GenAI Core
+
+langchain
+langchain_mistralai
+langchain_core
+
+# Run Pipeline
+
+dvc
+
+# Image Building
+
+docker
