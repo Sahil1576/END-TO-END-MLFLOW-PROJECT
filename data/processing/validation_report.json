@@ -1,0 +1,22 @@
+{
+    "train_rows": 6256,
+    "test_rows": 1565,
+    "train_missing_values": {
+        "detail_text": 0,
+        "label": 0
+    },
+    "test_missing_values": {
+        "detail_text": 0,
+        "label": 0
+    },
+    "train_duplicates": 2,
+    "test_duplicates": 0,
+    "train_label_distribution": {
+        "0": 3405,
+        "1": 2851
+    },
+    "test_label_distribution": {
+        "0": 852,
+        "1": 713
+    }
+}
